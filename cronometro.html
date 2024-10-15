@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>Cronómetro con Javascript</title>
+
+</head>
+
+<body onload="cronometro()">
+
+    Vemos aquí el reloj funcionando...
+
+    <form name="form_reloj">
+        <input type="text" name="reloj" size="10">
+    </form>
+    <input type="text" id="caja" value="caja">
+    <br>
+    <input type="button" onclick="cronometro()" value="inicio" />
+    <br>
+    <input type="button" onclick="contar_tiempo()" value="contar" />
+</body>
+<script language="JavaScript">
+    let segundo = 55, segundos_p = 0;
+    let minutos = 0;
+    let tiempo_primero = new Date();
+    let primera_vez=0;
+    function cronometro() {
+        //Primera vez que se ejecuta esta función
+        if(primera_vez==0){
+            //hago lo que quiera hacer la primera vez
+            tiempo_primero = new Date();
+            console.log("Se ejecuta solo una vez");
+            console.log(tiempo_primero.getTime());
+            primera_vez=1;
+        }
+       
+
+        segundo = segundo + 1;
+        // console.log(Math.trunc(63/60))
+        minutos = Math.trunc(segundo / 60);
+        segundos_p = segundo % 60;  
+      if (segundos_p < 10) {
+        tiempo = minutos + ":0" + segundos_p;
+      }
+        else { 
+            tiempo = minutos + ":" + segundos_p; 
+       }
+
+        console.log(tiempo);
+
+        document.form_reloj.reloj.value = segundo;
+        setTimeout("cronometro()", 1000)
+    }
+
+    function contar_tiempo(){
+        let tiempo_actual = new Date();
+        console.log("Tiempo actual", tiempo_actual.getTime());
+        let tiempo_transcurrido=tiempo_actual.getTime()-tiempo_primero.getTime();
+        console.log("Tiempo transcurrido: ", tiempo_transcurrido/1000);
+        }
+
+</script>
+
+</html>

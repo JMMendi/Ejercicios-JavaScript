@@ -84,23 +84,39 @@ function comprobarDNI() {
 // Muestra la fecha del sistema en formato UTC. Para ello usa el método .toUTCString();
 
 function mostrarFechaSistema() {
-    var fechaSis = new Date(Date.now);
-    alert(fechaSis.getDate());
+    let fechaSis = new Date(Date.now());
+    fechaSis.toUTCString;
+    alert(fechaSis);
 }
-// Me da NaN, no entiendo nada.
-
 
 // Actividad 6
 // 6. Muestra la fecha en este formato:   
 // Hoy es 17 de Octubre de 2022 
 // Para ello uso los métodos .getDate() .getMonth() .getFullYear()
 
+function mostrarFecha() {
+    let fecha = new Date(Date.now());
+    let dia = fecha.getDate();
+    let mes = fecha.getMonth();
+    let anio = fecha.getFullYear();
 
+    const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "septiembre", "Octubre", "Noviembre", "Diciembre"];
+    alert("Hoy es " + dia + " de " + meses[mes] + " de " + anio);
+}
 
 // Actividad 7
 // Crea dos botones, Inicio y Fin, primero se pulsa el botón inicio y un 
 //poco más tarde el botón fin y cuenta el tiempo que pasa entre los clicks de botón.  
 // Mostrará: El tiempo transcurrido son X segundos.
+
+var fecha_in, fecha_fin;
+function contarSegundosClick() {
+    fecha_in = new Date();
+}
+function terminarConteo() {
+    fecha_fin = new Date();
+    alert(parseInt((fecha_fin - fecha_in) / 1000) + " segundos han pasado.");
+}
 
 
 // Actividad 8
@@ -108,7 +124,61 @@ function mostrarFechaSistema() {
 // decimal y el carácter usado para el decimal es el "."  o  "," Ej:  98.12   ->  Entero 98  Decimal 12  
 // Para ello puedes usar un método que devuelve el índice de un elemento de un String.  indexof(ele)
 
+function descomponerNumero(){
+    let numero = document.getElementById("numero").value;
+    let separador;
+    
+    if (numero.indexOf(",") != -1) {
+        separador = ",";
+    } else if (numero.indexOf(".") != -1) {
+        separador = ".";
+    }
+
+    let entero = (numero.substring(0, numero.indexOf(separador)));
+    let decimal = (numero.substring(numero.indexOf(separador)+1, numero.length));
+
+    console.log(entero);
+    console.log(decimal);
+}
+
 // Actividad 9
 // Realiza una función que al pasarle una fecha devuelva si es válida o no válida. La fecha será introducida 
 // como día/mes/año. Ejemplo:  28/12/1982   Correcto.   65/19/1999  Fecha no válida.
 // Debéis tener en cuenta años bisiestos.
+
+function validarFecha(){
+    let fecha = document.getElementById('fechaValidar').value;
+
+    let correcto = false;
+    let arrayFecha = fecha.split("/");
+    let dia = arrayFecha[0];
+    let mes = arrayFecha[1];
+    let anio = arrayFecha[2];
+
+    if (anio < 0 || anio > 2024) {
+        alert("Error, año no válido.");
+    } else if (anio % 4 == 0 && mes == 2) {
+        if (dia < 1 || dia > 29) {
+            alert("Error, en año bisiesto el máximo de días es 29")
+        }
+    } else if (mes == 2) {
+        if (dia < 1 || dia > 28) {
+            alert("Error, Febrero no puede tener más de 28 días");
+        }
+    } else if (mes == 3 || mes == 6 || mes == 9 || mes == 11) {
+        if (dia < 1 || dia > 30) {
+            alert("Error, día incorrecto");
+        }
+    } else if (dia < 1 || dia > 31) {
+        alert("Error, un mes no puede tener más de 31 días.");
+    } else {
+        correcto = true;
+    }
+
+    if (correcto) {
+        console.log("Fecha correcta.");
+    }
+
+
+
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="codigo2.js"></script>
+    <title>Nueva Ventana</title>
+</head>
+<body onload="rellenarCampos()">
+    <h1>Datos Introducidos</h1>
+    <label for="nombre">Nombre: </label>
+    <input type="text" name="nombre" id="nombre"><br><br>
+    <label for="primerApellido">Primer Apellido: </label>
+    <input type="text" name="primerApellido" id="primerApellido"><br><br>
+    <label for="segundoApellido">Segundo Apellido: </label>
+    <input type="text" name="segundoApellido" id="segundoApellido"><br><br>
+    <label for="fechaNac">Fecha de Nacimiento: </label>
+    <input type="text" name="fechaNac" id="fechaNac"><br><br>
+    <label for="edad">Edad: </label>
+    <input type="text" name="edad" id="edad"><br><br>
+    <label for="acceso">Prueba de Acceso: </label>
+    <input type="text" name="acceso" id="acceso">
+
+    <br><br>
+
+    <input type="button" name="rellenar" id="rellenar" value="Rellenar Campos" onclick="rellenarCampos()">
+    
+    <h2>Conjetura de ULAM</h2>
+    <input type="button" name="conjetura" id="conjetura" value="Calcular Conjetura de ULAM" onclick="conjeturaUlam()">
+    <br>
+    <p id="resultado">Aquí aparecerá el resultado</p>
+</body>
+</html>

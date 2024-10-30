@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script defer>
+
+/*
+  Esta es la página principal, que abre otra ventana emergente en el fichero emergente.html 
+  y muestra información almacenada en este script, accediendo al opener.
+*/
+        let clase="Estamos en clases";
+        let variable="PPPPP"
+        function llamada(){
+            console.log("LLAMADA");
+            return clase;    
+        }
+        function funcion_si(){
+            alert("pulsado si")
+        }
+        tamw=this.window.screen.width/2-200;
+     
+        top=100;
+        let ventana1 = window.open("emergente.html", "1", "width=300,height=200,500 ,600}");
+      // let ventana2 = window.open("emergente.html", "2", "width=300,height=100,200 ,600}");
+        ventana1.document.write("Hola");
+        ventana1.document.write("ventana 1");
+        
+        function cerrar(x){
+            ventana1.close();
+            ventana2.close();
+
+
+
+            if (x==1)
+             ventana1.close();
+            if(x==2)
+            ventana2.close();
+        }
+        function direccion(){
+            ventana1.location.href="http://abc.es";
+        }
+   
+     
+    </script>
+</head>
+<html>
+<body>
+    <input type="text" id="caja" value="caja">
+    <br>
+    <input type="button" onclick="cerrar(1)" value="Cerrar1" />
+    <input type="button" onclick="cerrar(2)" value="Cerrar2" />
+    <input type="button" onclick="direccion()" value="URL" />
+    <br>
+</body>
+
+</html>

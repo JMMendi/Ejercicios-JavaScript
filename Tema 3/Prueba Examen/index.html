@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="codigo.js" defer></script>
+    <title>Examen Tema 1-2-3</title>
+</head>
+
+<body>
+    <h1>Formulario de entrada</h1>
+    <div id="divPrueba">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre"><br><br>
+        <label for="primerApellido">Primer Apellido: </label>
+        <input type="text" name="primerApellido" id="primerApellido" placeholder="Primer Apellido"><br><br>
+        <label for="segundoApellido">Segundo Apellido: </label>
+        <input type="text" name="segundoApellido" id="segundoApellido" placeholder="Segundo Apellido"><br><br>
+        <label for="fechaNac">Fecha de Nacimiento: </label>
+        <input type="text" name="fechaNac" id="fechaNac" placeholder="dd/MM/YYYY"><br><br>
+        <label for="edad">Edad: </label>
+        <input type="text" name="edad" id="edad" placeholder="26"><br><br>
+
+        <p>Modo de acceso al módulo: </p>
+        <input type="radio" name="acceso" value="accesoBach">Acceso desde Bachiller<br>
+        <input type="radio" name="acceso" value="accesoPrueba">Acceso con Prueba de acceso<br>
+        <input type="radio" name="acceso" value="accesoOtro">Acceso desde otro módulo<br>
+        <br><br>
+
+        <input type="button" name="enviar" value="Comprobar Datos" onclick="comprobarDatos()">
+    </div>
+</body>
+
+</html>

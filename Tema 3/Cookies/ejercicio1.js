@@ -19,12 +19,13 @@ function numeroAleatorio() {
     }
 }
 
-function recorrerRadio(radioGroup) {
+function comprobarMarcado(radioGroup) {
     marcado = false;
     for (let i = 0 ; i < radioGroup.length ; i++) {
         if (radioGroup[i].isChecked) {
             marcado = true;
         }
     }
+    console.log(marcado);
     return marcado;
 }

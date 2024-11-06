@@ -1,3 +1,19 @@
+if (getCookie('nombre') !== "") {
+  document.getElementById("nombre").value = getCookie('nombre'); 
+}
+if (getCookie('apellidos') !== "") {
+  document.getElementById("apellidos").value = getCookie('apellidos'); 
+}
+if (getCookie('dni') !== "") {
+  document.getElementById("dni").value = getCookie('dni'); 
+}
+if (getCookie('telefono') !== "") {
+  document.getElementById("telefono").value = getCookie('telefono'); 
+}
+if (getCookie('email') !== "") {
+  document.getElementById("email").value = getCookie('email'); 
+}
+
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays * 60 * 60 * 1000));

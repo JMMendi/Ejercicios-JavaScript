@@ -95,7 +95,7 @@ function desplazarDerecha() {
         let posicion = document.getElementById("posicion").value;
         let veces = document.getElementById("veces").value;
         for (i = 0 ; i < veces ; i++) {
-            arrayFinal.splice(posicion, 1, "----");
+            arrayFinal.splice(posicion, 0, "----");
             posicion++;
         }
         console.log("Tras el desplazamiento se queda como: " + arrayFinal.toString());
@@ -109,9 +109,40 @@ function duplicarArray() {
         console.log("Error, no se puede duplicar un array que no existe.");
     } else {
         let arrayCopia = [];
-        arrayFinal.forEach(element => {
-            arrayCopia.push(element);
-        });
+        for (let i = 0 ; i < arrayFinal.length ; i++) {
+            if (arrayCopia.includes(arrayFinal[i])) {
+                i++;
+            } else {
+                arrayCopia.push(arrayFinal[i]);
+            }
+        }
         console.log("La copia es: " + arrayCopia.toString())
+    }
+}
+
+// Actividad 2
+
+// Crea un vector que contenga palabras. 
+
+let palabras = ["Pato", "Amapola", "Coche", "Pelota", "Cernícalo", "Búho", "Apelar", "Tapete"];
+
+// Usa el método filter para  crear un nuevo vector con las palabras del vector que contengan la cadena "pe".
+
+let arrayCopia = [];
+
+function filtrarPe() {
+    for (i = 0 ; i < palabras.length ; i++) {
+        if (seleccionarPe(palabras[i].toLowerCase())) {
+            arrayCopia.push(palabras[i])
+        }
+    }
+    console.log ("La copia es de: " + arrayCopia)
+}
+
+function seleccionarPe(string) {
+    if (string.includes("pe")) {
+        return true;
+    } else {
+        return false;
     }
 }

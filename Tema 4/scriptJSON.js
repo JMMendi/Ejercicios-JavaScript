@@ -25,6 +25,14 @@ let alumnos = [
     },
 ];
 
+function mostrarAlumnos() {
+    console.log(alumnos);
+}
+
+function mostrarSegundoDni() {
+    console.log("El dni del segundo alumno es: " + alumnos[1].dni)
+}
+
 function anadirAlumno() {
     let dni = document.getElementById("dni").value;
     let nombre = document.getElementById("nombre").value;
@@ -38,14 +46,18 @@ function anadirAlumno() {
         "apellido" : apellido,
         "asignaturas" : arrayAsignatura 
     });
+
+    console.log("Añadido el alumno.");
 }
 
 function borrarAlumno() {
-    let dni = document.getElementById("dni").value;
+    let dni = document.getElementById("dniBorrar").value;
 
     for (i = 0 ; i < alumnos.length ; i++) {
         if (alumnos[i].dni == dni) {
             alumnos.splice(i, 1);
         }
     }
+
+    console.log("Se ha borrado el alumno.");
 }

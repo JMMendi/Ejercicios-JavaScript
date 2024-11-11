@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="formulario.js" defer></script>
+    <title>Ejercicios de Clases</title>
+</head>
+<body>
+    <h1>Formulario de Altas</h1>
+    <section>
+        <h2>Formulario de Alta de Alumno</h2>
+        <article>
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+
+            <label for="apellidos">Apellidos: </label>
+            <input type="text" id="apellidos" name="apellidos"><br><br>
+
+            <label for="dni">DNI: </label>
+            <input type="text" id="dni" name="dni"><br><br>
+
+            <label for="fechaNacimiento">Fecha de Nacimiento: </label>
+            <input type="text" id="fechaNacimiento" name="fechaNacimiento" placeholder="dia/mes/año"><br><br>
+
+            <label for="edad">Edad: </label>
+            <input type="text" id="edad" name="edad"><br><br>
+
+            <label for="curso">Curso: </label>
+            <input type="text" id="curso" name="curso"><br><br>
+
+            <label for="asignaturas">Asignaturas: </label>
+            <input type="text" id="asignaturas" name="asignaturas" placeholder="asignatura1, asignatura2, asignatura3...">
+            
+            <input type="button" id="guardarAlumnos" value="Registrar Datos Alumno" onclick="guardarAlumno()">
+        </article>
+        <article>
+            <h3>Mostrar Resultados</h3>
+            <input type="button" id="mostrarAlumnos" value="Mostrar Alumnos" onclick="mostrarAlumnos()"><br><br>
+
+            <label for="asignaturaConcreta"> Asignatura: </label>
+            <input type="text" id="asignaturaConcreta" name="asignaturaConcreta" placeholder="Asignatura"><br><br>
+            <input type="button" id="mostrarAlumnosAsignatura" value="Mostrar Alumnos según Asignatura" onclick="mostrarAlumnosAsignaturas()"><br><br>
+        </article>
+    </section>
+</body>
+</html>

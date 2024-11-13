@@ -4,7 +4,7 @@ let alumnos = [
         "nombre" : "Ana",
         "apellido" : "García",
         "edad" : 23,
-        "asignaturas" : ["Sistemas Informáticos", "Lenguajes de Marcas", "FOL"]
+        "asignaturas" : ["Sistemas Informáticos", "Lenguajes de Marcas", "Desarrollo Web en Entorno Cliente"]
     },
     {
         "dni" : "23456789B",
@@ -89,3 +89,8 @@ function mostrarMayores() {
         }
     });
 }
+
+function mostrarPorAsignatura(alumnos) {
+    return alumnos.asignaturas.includes(document.getElementById('porAsignatura').value);
+}
+

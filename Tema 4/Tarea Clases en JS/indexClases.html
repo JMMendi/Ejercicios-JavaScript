@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
     <script src="formulario.js" defer></script>
     <title>Ejercicios de Clases</title>
 </head>
 <body>
     <h1>Formulario de Altas</h1>
-    <section>
+    <section id="left">
         <h2>Formulario de Alta de Alumno</h2>
         <article>
             <label for="nombre">Nombre: </label>
@@ -41,6 +42,42 @@
             <label for="asignaturaConcreta"> Asignatura: </label>
             <input type="text" id="asignaturaConcreta" name="asignaturaConcreta" placeholder="Asignatura"><br><br>
             <input type="button" id="mostrarAlumnosAsignatura" value="Mostrar Alumnos según Asignatura" onclick="mostrarAlumnosAsignaturas()"><br><br>
+        </article>
+    </section>
+
+    <section id="right">
+        <h2>Formulario de Alta de Profesor</h2>
+        <article>
+            <label for="nombreProfes">Nombre: </label>
+            <input type="text" id="nombreProfes" name="nombreProfes"><br><br>
+
+            <label for="apellidosProfes">Apellidos: </label>
+            <input type="text" id="apellidosProfes" name="apellidosProfes"><br><br>
+
+            <label for="dniProfes">DNI: </label>
+            <input type="text" id="dniProfes" name="dniProfes"><br><br>
+
+            <label for="fechaNacimientoProfes">Fecha de Nacimiento: </label>
+            <input type="text" id="fechaNacimientoProfes" name="fechaNacimientoProfes" placeholder="dia/mes/año"><br><br>
+
+            <label for="edadProfes">Edad: </label>
+            <input type="text" id="edadProfes" name="edadProfes"><br><br>
+
+            <label for="cursoProfes">Curso: </label>
+            <input type="text" id="cursoProfes" name="cursoProfes"><br><br>
+
+            <label for="asignaturasProfes">Asignaturas: </label>
+            <input type="text" id="asignaturasProfes" name="asignaturasProfes" placeholder="asignatura1, asignatura2, asignatura3...">
+            
+            <input type="button" id="guardarProfesores" value="Registrar Datos Profesor" onclick="guardarProfesor()">
+        </article>
+        <article>
+            <h3>Mostrar Resultados</h3>
+            <input type="button" id="mostrarProfesores" value="Mostrar Profesores" onclick="mostrarProfesores()"><br><br>
+
+            <label for="asignaturaConcretaProfes"> Asignatura: </label>
+            <input type="text" id="asignaturaConcretaProfes" name="asignaturaConcretaProfes" placeholder="Asignatura"><br><br>
+            <input type="button" id="mostrarProfesoresAsignatura" value="Mostrar Profesores según Asignatura" onclick="mostrarProfesoresAsignaturas()"><br><br>
         </article>
     </section>
 </body>

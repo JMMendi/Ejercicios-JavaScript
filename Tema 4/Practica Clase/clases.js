@@ -40,6 +40,8 @@ class Profesor extends Persona {
 //     new Alumno = ('Lucia', '34567890C', 'Martinez', ['Despliegues', 'Diseños', 'Web Cliente'])
 // ];
 
-let juanma = new Alumno("Juan Manuel", "45900836N", "Mendizábal Amat", ['Web Cliente', 'Despliegues', 'Diseños']);
+// let juanma = new Alumno("Juan Manuel", "45900836N", "Mendizábal Amat", ['Web Cliente', 'Despliegues', 'Diseños']);
 
-console.log(juanma.buscarAsignaturas('Despliegues'));
+// console.log(juanma.buscarAsignaturas('Despliegues'));
+
+

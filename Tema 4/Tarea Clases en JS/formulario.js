@@ -10,19 +10,18 @@ class Persona {
 }
 
 class Alumno extends Persona {
-    constructor(curso, asignaturas) {
-        super(this.nombre, this.apellidos, this.dni, this.fechaNacimiento, this.edad);
+    constructor(nombre, apellidos, dni, fechaNacimiento, edad, curso, asignaturas) {
+        super(nombre, apellidos, dni, fechaNacimiento, edad);
         this.curso = curso;
         this.asignaturas = asignaturas;
     }
 }
 
 class Profesor extends Persona {
-    constructor(cursos, asignaturas, tutor) {
-        super(this.nombre, this.apellidos, this.dni, this.fechaNacimiento, this.edad);
+    constructor(nombre, apellidos, dni, fechaNacimiento, edad, cursos, asignaturas) {
+        super(nombre, apellidos, dni, fechaNacimiento, edad);
         this.cursos = cursos;
         this.asignaturas = asignaturas;
-        this.tutor = tutor;
     }
 }
 
@@ -119,7 +118,7 @@ function guardarAlumno() {
 
 function mostrarAlumnos() {
     alumnos.forEach(element => {
-        console.log("DNI: " + element.edad + " NOMBRE: " + element.apellidos + " " + element.nombre + " Nº de Asignaturas: " + element.asignaturas.length);
+        console.log("DNI: " + element.dni + " NOMBRE: " + element.apellidos + " " + element.nombre + " Nº de Asignaturas: " + element.asignaturas.length);
     });
 }
 
@@ -127,6 +126,43 @@ function mostrarAlumnosAsignaturas() {
     let asignaturaConcreta = document.getElementById("asignaturaConcreta").value;
 
     alumnos.forEach(element => {
+        (element.asignaturas).forEach (asignatura => {
+            if (asignatura == asignaturaConcreta) {
+                console.log(element);
+            }
+        })        
+    });
+}
+
+function guardarProfesor() {
+    let nombre = document.getElementById("nombreProfes").value;
+    let apellidos = document.getElementById("apellidosProfes").value;
+    let dni = document.getElementById("dniProfes").value;
+    let fechaNacimiento = document.getElementById("fechaNacimientoProfes").value;
+    let edad = parseInt(document.getElementById("edadProfes").value);
+    let curso = parseInt(document.getElementById("cursoProfes").value);
+    let asignaturas = (document.getElementById("asignaturasProfes").value).split(",");
+
+    comprobarCadenas(nombre);
+    comprobarCadenas(apellidos);
+    comprobarDni(dni);
+    comprobarFecha(fechaNacimiento);
+    comprobarEdad(edad, fechaNacimiento);
+
+    profesores.push(new Profesor(nombre, apellidos, dni, fechaNacimiento, edad, curso, asignaturas));
+    console.log (profesores);
+}
+
+function mostrarProfesores() {
+    profesores.forEach(element => {
+        console.log("DNI: " + element.dni + " NOMBRE: " + element.apellidos + " " + element.nombre + " Nº de Asignaturas: " + element.asignaturas.length);
+    });
+}
+
+function mostrarProfesoresAsignaturas() {
+    let asignaturaConcreta = document.getElementById("asignaturaConcretaProfes").value;
+
+    profesores.forEach(element => {
         (element.asignaturas).forEach (asignatura => {
             if (asignatura == asignaturaConcreta) {
                 console.log(element);

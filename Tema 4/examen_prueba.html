@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Examen_Prueba.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <form action="">
+            <fieldset>
+                <legend>Formulario de Ingreso de Motos</legend>
+                <label for="marca">Marca</label><br>
+                <input type="text" name="marca" id="marca" placeholder="Marca"><br><br>
+
+                <label for="modelo">Modelo</label><br>
+                <input type="text" name="modelo" id="modelo" placeholder="Modelo"><br><br>
+
+                <label for="color">Color</label><br>
+                <input type="text" name="color" id="color" placeholder="Color"><br><br>
+
+                <label for="matricula">Matrícula</label><br>
+                <input type="text" name="matricula" id="matricula" placeholder="Matrícula"><br><br>
+
+                <input type="checkbox" name="cilindrada" id="cil1" value="125 CC">
+                <label for="cil1"> 125 CC</label><br>
+
+                <input type="checkbox" name="cilindrada" id="cil2" value="300 CC">
+                <label for="cil2"> 300 CC</label><br>
+
+                <input type="checkbox" name="cilindrada" id="cil3" value="600 CC">
+                <label for="cil3"> 600 CC</label><br><br><br>
+
+                <input type="button" id="aceptar" value="Aceptar" onclick="comprobarDatos()">
+            </fieldset>
+        </form>
+    </section>
+    <br><br><br>
+    <section>
+        <form action="">
+            <fieldset>
+                <label for="buscarMatricula">Buscar Matricula</label><br><br>
+                <input type="text" name="buscarMatricula" id="buscarMatricula" placeholder="Matrícula"><br><br>
+                <input type="button" name="buscarPorMatricula" id="buscarPorMatricula" value="Buscar" onclick="prueba()">
+            </fieldset>
+
+        </form>
+
+    </section>
+    <span id="prueba"></span>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/script1.js" defer></script>
+    <title>Ejercicios Relación 1 - Tema 5</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>Ejercicio 1</h3>
+            <p>Crea un documento html con un &lt;div&gt; y un &lt;p&gt; y crea un evento semántico asociado a un botón que modifique el contenido del párrafo para que cuente el nº de veces que se hace onclick. Este método usando el método .onclick= funtion()  tiene el problema de haber cargado el DOM antes de usarlo.</p>  
+            <div>
+                <p id="parrafo">Número de veces que se clicka en el div/p</p>
+            </div>      
+        </section>
+        <section>
+            <h3>Ejercicio 2</h3>
+            <p>Usando AddEventListener modifica la actividad anterior para modificar el párrafo en el evento "click"</p>
+            <div>
+                <p id="parrafo2">Número de veces que se clicka en el div/p (con EventListener)</p>
+            </div>
+        </section>
+        <section>
+            <h3>Ejercicio 3</h3>
+            <p>Realiza un script que usando el método AddEventListener y los eventos oportunos modifique las imágenes que hay en un html ampliándolas cuando el ratón pasa por encima de la imagen y disminuye cuando el ratón  sale de la imagen.</p>
+            <article>
+                <figure>
+                    <img id="imagen" src="media/logoIes.png" alt=""/>
+                </figure>
+                <figure>
+                    <img src="media/logoIes.png" alt=""/>
+                </figure>
+                <figure>
+                    <img src="media/logoIes.png" alt=""/>
+                </figure>
+            </article>
+        </section>
+        <section>
+            <h3>Ejercicio 4</h3>
+            <p>Realiza un script con un botón que recorra todas las imágenes de un html usando la función getElementsByTagName y modifique el tamaño de todas las imágenes que hay.  Funcionará independientemente del html. El programador no debe saber a priori cuantas imágenes hay en el html.</p>
+        </section>
+        <section>
+            <h3>Ejercicio 5</h3>
+            <p>Modifica el programa de la actividad 4 para que funcione cada vez que se haga click sobre la imagen.</p>
+        </section>
+    </main>
+</body>
+</html>

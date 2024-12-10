@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/validity.js" defer></script>
+    <title>Formulario de Validación</title>
+</head>
+<body>
+    <form action="" id="formulario">
+        <fieldset>
+            <legend>Validación</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" minlength="3" maxlength="12"><br><br>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" minlength="5" maxlength="30"><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" pattern="[a-z]*@[a-z]*.[a-z]{2,}"><br><br>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" pattern="[0-9]{9}"><br><br>
+
+            <input type="button" id="validar" name="validar" value="Validar">
+        </fieldset>
+    </form>
+</body>
+</html>

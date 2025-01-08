@@ -7,20 +7,37 @@
     <title>Formulario de Validación</title>
 </head>
 <body>
-    <form action="" id="formulario">
+    <!-- <form action="" id="formulario">
         <fieldset>
             <legend>Validación</legend>
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" minlength="3" maxlength="12"><br><br>
+            <input type="text" id="nombre" name="nombre" minlength="3" maxlength="12" required><br><br>
             <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" minlength="5" maxlength="30"><br><br>
+            <input type="text" id="apellidos" name="apellidos" minlength="5" maxlength="30" required><br><br>
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email" pattern="[a-z]*@[a-z]*.[a-z]{2,}"><br><br>
+            <input type="text" id="email" name="email" pattern="[a-z]*@[a-z]*.[a-z]{2,}" required><br><br>
             <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="telefono" pattern="[0-9]{9}"><br><br>
+            <input type="text" id="telefono" name="telefono" pattern="[0-9]{9}" required><br><br>
 
             <input type="button" id="validar" name="validar" value="Validar">
         </fieldset>
+    </form> -->
+
+    <h2>Formulario de Registro</h2>
+    <form id="miFormulario">
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+  
+      <label for="email">Correo Electrónico:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+  
+      <label for="edad">Edad (mínimo 18 años):</label><br>
+      <input type="number" id="edad" name="edad" min="18" required><br><br>
+  
+      <button type="submit">Enviar</button>
     </form>
+  
+    <div id="mensaje"></div>
+
 </body>
 </html>

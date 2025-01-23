@@ -41,11 +41,18 @@ function saltoLinea() {
                 frase.concat('<br>'); 
                 inicio = i+1;
                 text.concat(frase);
+                
             }
             
         }
+        /*
+        parrafos.forEach(function (parrafo) {
+            parrafo.innerHTML = parrafo.innerHTML.replace(/\./g '.<br>');
+        });
+        
+        */
         texto.textContent = text;
-        console.log(text);
+        console.log(texto.textContent);
     });
 }
 
